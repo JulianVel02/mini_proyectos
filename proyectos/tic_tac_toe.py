@@ -96,15 +96,18 @@ ventana = Tk()
 ventana.title("Tic-Tac-Toe")
 jugadores = ["⭕", "❌"]
 jugador = random.choice(jugadores)
-botones = [[0, 0, 0],
-           [0, 0, 0],
-           [0, 0, 0]]
+botones = [[None, None, None],
+           [None, None, None],
+           [None, None, None]]
 
-etiqueta_turno = Label(text=jugador + " turn", font=('consolas', 40))
+
+etiqueta_turno = Label(text=jugador + " turn",
+                       font=('consolas', 40))
 etiqueta_turno.pack(side="top")
 
-reseteo_boton = Button(text="Restart", font=(
-    'consolas', 20), command=nuevo_juego)
+reseteo_boton = Button(text="Restart",
+                       font=('consolas', 20),
+                       command=nuevo_juego)
 reseteo_boton.pack(side="top")
 
 frame = Frame(ventana)
@@ -112,9 +115,11 @@ frame.pack()
 
 for fila in range(3):
     for columna in range(3):
-        botones[fila][columna] = Button(frame, text="", font=('consolas', 40),
+        botones[fila][columna] = Button(frame, text="",
+                                        font=('consolas', 40),
                                         width=5, height=2,
-                                        command=lambda fila=fila, columna=columna: siguiente_turno(fila, columna))
+                                        command=lambda fila=fila,
+                                        columna=columna: siguiente_turno(fila, columna))
         botones[fila][columna].grid(row=fila, column=columna)
 
 ventana.mainloop()
