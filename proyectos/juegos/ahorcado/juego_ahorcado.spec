@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['juego_ahorcado.py'],
+    ['D:\\Archivos del Programa\\Git-Hub\\mini_proyectos\\proyectos\\juego_ahorcado.py'],
     pathex=[],
     binaries=[],
     datas=[],

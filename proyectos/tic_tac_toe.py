@@ -123,3 +123,4 @@ for fila in range(3):
         botones[fila][columna].grid(row=fila, column=columna)
 
 ventana.mainloop()
+input("Presiona cualquier tecla para salir...")
